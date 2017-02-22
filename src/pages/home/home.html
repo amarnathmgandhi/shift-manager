@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Shift Manager
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Start Time</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="shift.startTime" minuteValues="0,15,30,45" hourValues="7,8,9,10,11,12,13,14,15,16,17,18,19" (ionChange)="calculateDuration()"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>End Time</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="shift.endTime" minuteValues="0,15,30,45" hourValues="7,8,9,10,11,12,13,14,15,16,17,18,19" (ionChange)="calculateDuration()"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Lunch</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="shift.lunchDuration" minuteValues="0,15,30,45" hourValues="0,1" (ionChange)="calculateDuration()"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Duration</ion-label>
+        <ion-input class="duration" type="text" value={{shift?.shiftDuration}} readonly=true></ion-input>
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+</ion-content>
