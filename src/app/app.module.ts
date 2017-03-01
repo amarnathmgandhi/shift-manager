@@ -2,8 +2,6 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { DateTimePickerModule } from 'ng2-date-time-picker/dist';
-import { jqxDateTimeInputComponent } from 'jqwidgets-framework/jqwidgets-ts/angular_jqxdatetimeinput';
 
 @NgModule({
   declarations: [
@@ -11,8 +9,7 @@ import { jqxDateTimeInputComponent } from 'jqwidgets-framework/jqwidgets-ts/angu
     HomePage
   ],
   imports: [
-    IonicModule.forRoot(MyApp),
-    DateTimePickerModule
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
